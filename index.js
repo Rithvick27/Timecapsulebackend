@@ -7,7 +7,7 @@ var cors = require("cors");
 
 const app = express();
 
-const PORT =process.env.PORT || 5000;
+const port =process.env.port || 5000;
 app.use(express.json());
 app.use(cors());
 // available routes
@@ -15,5 +15,5 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/data", require("./routes/data"));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Example app listening on port ${port}`);
 });
